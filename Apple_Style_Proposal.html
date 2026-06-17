@@ -1,0 +1,1066 @@
+
+<style id="apple-redesign">
+:root{
+--bg:#f5f5f7;
+--card:rgba(255,255,255,.78);
+--border:rgba(255,255,255,.55);
+--shadow:0 20px 60px rgba(0,0,0,.08);
+--radius:28px;
+}
+
+body{
+background:
+radial-gradient(circle at top left,#eef4ff 0%,#f5f5f7 40%),
+radial-gradient(circle at bottom right,#f0fdf4 0%,#f5f5f7 40%) !important;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif !important;
+}
+
+.p{
+max-width:1280px !important;
+background:rgba(255,255,255,.7) !important;
+backdrop-filter:blur(24px);
+border-radius:32px !important;
+border:1px solid rgba(255,255,255,.7) !important;
+box-shadow:var(--shadow) !important;
+}
+
+.cover{
+background:linear-gradient(135deg,#ffffff,#f8fafc) !important;
+border-radius:32px !important;
+padding:40px !important;
+display:grid !important;
+grid-template-columns:65% 35% !important;
+align-items:center !important;
+box-shadow:0 12px 40px rgba(0,0,0,.05);
+}
+
+.cover-client{
+font-size:52px !important;
+font-weight:800 !important;
+line-height:1.05;
+}
+
+.cover-price{
+font-size:64px !important;
+font-weight:800 !important;
+}
+
+.service-grid{
+display:grid !important;
+grid-template-columns:repeat(3,1fr) !important;
+gap:24px !important;
+}
+
+.svc-card,
+.tc-card,
+.bundle-total,
+.highlight,
+.highlight-note{
+background:var(--card) !important;
+backdrop-filter:blur(18px);
+border-radius:24px !important;
+border:1px solid var(--border) !important;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.svc-card{
+transition:all .25s ease;
+}
+.svc-card:hover{
+transform:translateY(-8px);
+}
+
+.sec-label{
+font-size:32px !important;
+font-weight:800 !important;
+letter-spacing:-.02em;
+}
+
+table{
+border-radius:20px;
+overflow:hidden;
+background:white;
+}
+
+th{
+background:#f8fafc !important;
+}
+
+.footer-bar{
+padding-top:30px !important;
+}
+
+@media (max-width:1024px){
+.service-grid{
+grid-template-columns:repeat(2,1fr) !important;
+}
+.cover{
+grid-template-columns:60% 40% !important;
+}
+}
+
+@media (max-width:768px){
+.p{
+padding:16px !important;
+}
+
+.cover{
+grid-template-columns:58% 42% !important;
+padding:20px !important;
+gap:12px !important;
+}
+
+.cover-client{
+font-size:24px !important;
+}
+
+.cover-price{
+font-size:34px !important;
+}
+
+.cover-sub,
+.cover-meta-row{
+font-size:12px !important;
+}
+
+.service-grid,
+.tc-grid{
+grid-template-columns:1fr !important;
+}
+
+.sec-label{
+font-size:20px !important;
+}
+
+table{
+display:block;
+overflow-x:auto;
+-webkit-overflow-scrolling:touch;
+}
+
+.footer-bar{
+flex-direction:column !important;
+text-align:center;
+}
+}
+</style>
+
+<style>
+:root{
+--glass-bg:rgba(255,255,255,.72);
+--glass-border:rgba(255,255,255,.45);
+--shadow:0 10px 35px rgba(0,0,0,.08);
+}
+
+body{
+background:
+linear-gradient(135deg,#f8fafc 0%,#eef2ff 45%,#f8fafc 100%) !important;
+}
+
+.p{
+max-width:1200px !important;
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+background:rgba(255,255,255,.82) !important;
+border:1px solid rgba(255,255,255,.6) !important;
+box-shadow:var(--shadow) !important;
+}
+
+.cover,
+.svc-card,
+.tc-card,
+.bundle-total,
+.highlight-note,
+.highlight{
+background:var(--glass-bg) !important;
+backdrop-filter:blur(16px);
+-webkit-backdrop-filter:blur(16px);
+border:1px solid var(--glass-border) !important;
+box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+.cover{
+border-radius:24px !important;
+}
+
+.svc-card{
+border-radius:20px !important;
+}
+
+.svc-card:hover{
+transform:translateY(-6px) !important;
+}
+
+.tc-card{
+border-radius:18px !important;
+}
+
+.bundle-total{
+border-radius:20px !important;
+}
+
+table{
+overflow:hidden;
+border-radius:16px;
+background:white;
+}
+
+thead th{
+position:sticky;
+top:0;
+}
+
+.cover-client{
+background:linear-gradient(135deg,#1d3557,#4361ee);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.sec-label{
+font-size:28px !important;
+}
+
+@media (max-width:768px){
+.cover{grid-template-columns:1fr !important;}
+.service-grid{grid-template-columns:1fr !important;}
+.tc-grid{grid-template-columns:1fr !important;}
+.cover-price{font-size:40px !important;}
+.sec-label{font-size:20px !important;}
+table{display:block;overflow-x:auto;}
+}
+
+@media (min-width:769px) and (max-width:1100px){
+.service-grid{
+grid-template-columns:repeat(2,1fr) !important;
+}
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Agreement - Clauses</title>
+    <style>
+.highlight-note{
+
+margin-top:18px;
+
+padding:16px 20px;
+
+background:#fff7ed;
+
+border-left:4px solid #f59e0b;
+
+border-radius:0px;
+
+font-size:13px;
+
+line-height:1.7;
+
+color:#57534e;
+
+}
+
+.highlight-note strong{
+
+display:block;
+
+margin-bottom:6px;
+
+font-size:14px;
+
+font-weight:700;
+
+color:#92400e;
+
+}
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+        }
+        .agreement-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e1e1e1;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .highlight {
+            background-color: #fcf8e3;
+            padding: 10px 15px;
+            border-left: 4px solid #f0ad4e;
+            margin: 20px 0;
+            font-style: italic;
+        }
+    </style>
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+
+font-family:'Helvetica Neue',Arial,sans-serif;
+
+line-height:1.7;
+
+color:#333;
+
+background:#f9f9f9;
+
+padding:40px 20px;
+}
+
+.p{
+
+max-width:1050px;
+margin:auto;
+
+background:#fff;
+
+padding:50px;
+
+border-radius:10px;
+
+border:1px solid #e1e1e1;
+
+box-shadow:0 4px 6px rgba(0,0,0,.05);
+}
+
+
+/* SECTION HEADINGS */
+
+.sec-label{
+
+font-size:24px;
+
+font-weight:700;
+
+letter-spacing:0;
+
+text-transform:none;
+
+color:#1d2939;
+
+padding-bottom:14px;
+
+border-bottom:2px solid #e4e7ec;
+
+margin:60px 0 30px;
+
+}}
+
+
+/* COVER */
+
+.cover{
+
+display:grid;
+
+grid-template-columns:2fr 1fr;
+
+gap:50px;
+
+align-items:start;
+
+padding:40px;
+
+border:1px solid #e4e7ec;
+
+border-radius:18px;
+
+background:#fafafa;
+
+margin-bottom:50px;
+
+}
+.cover-badge{
+
+display:inline-block;
+
+margin-top:18px;
+
+padding:10px 16px;
+
+border-radius:999px;
+
+background:#eaf7ee;
+
+color:#2d6a4f;
+
+font-size:13px;
+
+font-weight:600;
+
+}
+.cover-right{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:flex-end;
+
+text-align:right;
+
+justify-content:flex-start;
+
+}
+.cover-client{
+
+font-size:38px;
+
+font-weight:700;
+
+color:#2c3e50;
+}
+
+.cover-sub{
+
+font-size:16px;
+
+color:#666;
+
+margin:8px 0 20px;
+}
+
+.mv-logo{
+
+font-size:12px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#777;
+
+margin-bottom:20px;
+}
+
+.cover-meta{
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+}
+
+.cover-price{
+
+font-size:56px;
+
+font-weight:700;
+
+line-height:1;
+
+margin:12px 0;
+
+color:#1d3557;
+
+}
+.cover-price-label{
+
+font-size:12px;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+color:#777;
+}
+
+
+/* SERVICE CARDS */
+
+.service-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:18px;
+
+margin-top:25px;
+
+}
+
+.svc-card{
+
+background:#fff;
+
+border:1px solid #e4e7ec;
+
+border-radius:14px;
+
+padding:24px;
+
+min-height:380px;
+
+transition:.2s ease;
+
+}
+
+.svc-card:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+.svc-name{
+
+font-size:18px;
+
+font-weight:700;
+
+color:#2c3e50;
+
+margin-bottom:8px;
+}
+
+.svc-price{
+
+color:#777;
+
+margin-bottom:15px;
+}
+
+.svc-items{
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+}
+
+.svc-item{
+
+font-size:14px;
+}
+
+
+/* BUNDLE */
+
+.bundle-total{
+
+background:#f5f7fa;
+
+border:1px solid #e1e1e1;
+
+border-radius:8px;
+
+padding:25px;
+
+display:flex;
+
+justify-content:space-between;
+
+gap:30px;
+
+margin-top:30px;
+}
+
+.bt-price{
+
+font-size:34px;
+
+font-weight:700;
+
+color:#2c3e50;
+}
+
+
+/* TABLES */
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:20px;
+}
+
+th{
+
+background:#f5f5f5;
+
+font-weight:700;
+
+color:#2c3e50;
+}
+
+th,td{
+
+padding:16px;
+
+border-bottom:1px solid #e1e1e1;
+
+vertical-align:top;
+
+text-align:left;
+}
+
+
+/* INFO BOXES */
+
+.tc-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:20px;
+}
+
+.tc-card{
+
+border:1px solid #e1e1e1;
+
+border-radius:8px;
+
+padding:20px;
+
+background:#fff;
+}
+
+.tc-title{
+
+font-size:18px;
+
+font-weight:700;
+
+margin-bottom:10px;
+
+color:#2c3e50;
+}
+
+.tc-body{
+
+color:#555;
+}
+
+
+/* LEGAL SECTION */
+
+.agreement-container{
+
+margin-top:50px;
+}
+
+h2{
+
+font-size:22px;
+
+color:#2c3e50;
+
+border-bottom:2px solid #ecf0f1;
+
+padding-bottom:10px;
+
+margin:35px 0 20px;
+}
+
+p{
+
+margin-bottom:20px;
+
+text-align:justify;
+}
+
+.highlight{
+
+background:#fcf8e3;
+
+padding:15px 18px;
+
+border-left:4px solid #f0ad4e;
+
+font-style:italic;
+}
+
+
+/* FOOTER */
+
+.footer-bar{
+
+margin-top:50px;
+
+padding-top:20px;
+
+border-top:1px solid #e1e1e1;
+
+display:flex;
+
+justify-content:space-between;
+
+flex-wrap:wrap;
+
+gap:20px;
+}
+
+.footer-mv,
+.footer-contact{
+
+font-size:13px;
+
+color:#777;
+}
+
+</style>
+
+<div class="p">
+
+<!-- ── COVER ── -->
+<div class="cover">
+  <div class="cover-left">
+    <div class="mv-logo">META<span>.</span>VIBRONICS — SERVICE PROPOSAL</div>
+    <div class="cover-client">Bhaavtharang</div>
+    <div class="cover-sub">Psychiatric Practice — Digital Growth Ecosystem</div>
+    <div class="cover-meta">
+      <div class="cover-meta-row"><strong>Prepared by</strong> Animesh Lodhi & Bhumi Gupta, Meta Vibronics</div>
+      <div class="cover-meta-row"><strong>Prepared for</strong> Bhaavtharang</div>
+      <div class="cover-meta-row"><strong>Date</strong> June 2026</div>
+      <div class="cover-meta-row"><strong>Valid until</strong> 30 days from issue</div>
+    </div>
+  </div>
+  <div class="cover-right">
+    <div class="cover-price-label">Bundle investment</div>
+    <div class="cover-price">₹19,999</div>
+    <div class="cover-price-note">one-time setup + Month 1 Content included</div>
+    <div class="cover-badge">Ecosystem Bundle</div>
+  </div>
+</div>
+
+<!-- ── WHAT'S IN THE BUNDLE ── -->
+<div class="sec-label">What Bhaavtharang gets — all 6 services, fully executed</div>
+<div class="service-grid">
+  <div class="svc-card">
+    <div class="svc-name">Social Media Growth</div>
+    <div class="svc-price">₹7,999/month (ongoing)</div>
+    <div class="svc-items">
+      <div class="svc-item"><span class="q">12</span> posts/month (static, carousel, reel)</div>
+      <div class="svc-item"><span class="q">15</span> story drafts/month</div>
+      <div class="svc-item"><span class="q">6</span> reel cover templates</div>
+      <div class="svc-item"><span class="q">30</span> hashtags — one research sprint</div>
+      <div class="svc-item"><span class="q">1</span> monthly content calendar</div>
+      <div class="svc-item"><span class="q">1</span> monthly performance report</div>
+    </div>
+  </div>
+  <div class="svc-card">
+    <div class="svc-name">Professional Brand Setup</div>
+    <div class="svc-price">₹4,999 one-time</div>
+    <div class="svc-items">
+      <div class="svc-item"><span class="q">1</span> Instagram + LinkedIn refresh</div>
+      <div class="svc-item"><span class="q">6</span> highlight cover icons</div>
+      <div class="svc-item"><span class="q">1</span> Linktree — up to 6 CTA buttons</div>
+      <div class="svc-item"><span class="q">1</span> professional email signature</div>
+      <div class="svc-item"><span class="q">1</span> custom domain email setup</div>
+      <div class="svc-item"><span class="q">1</span> brand assets folder organised</div>
+    </div>
+  </div>
+  <div class="svc-card">
+    <div class="svc-name">WhatsApp Automation</div>
+    <div class="svc-price">₹9,999 one-time</div>
+    <div class="svc-items">
+      <div class="svc-item"><span class="q">1</span> WhatsApp Business setup</div>
+      <div class="svc-item"><span class="q">8</span> catalog items with pricing</div>
+      <div class="svc-item"><span class="q">5</span> auto-reply / quick-reply messages</div>
+      <div class="svc-item"><span class="q">1</span> inquiry workflow built</div>
+      <div class="svc-item"><span class="q">1</span> CRM dashboard (Notion/Airtable)</div>
+      <div class="svc-item"><span class="q">1</span> Google Calendar + Zoom linked</div>
+    </div>
+  </div>
+  <div class="svc-card">
+    <div class="svc-name">Booking & Payment System</div>
+    <div class="svc-price">₹9,999 one-time</div>
+    <div class="svc-items">
+      <div class="svc-item"><span class="q">1</span> booking landing page</div>
+      <div class="svc-item"><span class="q">1</span> Razorpay gateway setup</div>
+      <div class="svc-item"><span class="q">1</span> Calendly / Cal.com configured</div>
+      <div class="svc-item"><span class="q">3</span> custom payment link templates</div>
+      <div class="svc-item"><span class="q">2</span> lead capture forms</div>
+      <div class="svc-item"><span class="q">1</span> automated booking confirmation</div>
+    </div>
+  </div>
+  <div class="svc-card">
+    <div class="svc-name">Google Business Setup</div>
+    <div class="svc-price">₹4,999 one-time</div>
+    <div class="svc-items">
+      <div class="svc-item"><span class="q">1</span> Google Business Profile setup</div>
+      <div class="svc-item"><span class="q">10</span> services listed with copy</div>
+      <div class="svc-item"><span class="q">10</span> storefront images uploaded</div>
+      <div class="svc-item"><span class="q">1</span> review QR code — print-ready</div>
+      <div class="svc-item"><span class="q">1</span> location + radius configured</div>
+    </div>
+  </div>
+  <div class="svc-card">
+    <div class="svc-name">Custom AI Content Assistant</div>
+    <div class="svc-price">₹5,999 one-time</div>
+    <div class="svc-items">
+      <div class="svc-item"><span class="q">1</span> Custom GPT trained on Bhaavtharang's voice</div>
+      <div class="svc-item"><span class="q">5</span> Instagram caption prompt styles</div>
+      <div class="svc-item"><span class="q">1</span> LinkedIn content prompt system</div>
+      <div class="svc-item"><span class="q">1</span> workshop/event promo templates</div>
+      <div class="svc-item"><span class="q">1</span> WhatsApp broadcast draft system</div>
+      <div class="svc-item"><span class="q">1</span> email draft assistance setup</div>
+    </div>
+  </div>
+</div>
+
+<!-- bundle total -->
+<div class="bundle-total">
+  <div class="bt-left">
+    <div class="bt-name">Digital Growth Ecosystem — complete bundle</div>
+    <div class="bt-note">All foundational setups + 1st month of social media growth management. Total ala-carte value: ₹42,994</div>
+  </div>
+  <div class="bt-right">
+    <div class="bt-price">₹19,999</div>
+    <div class="bt-save">Exclusive package savings: ₹22,995</div>
+  </div>
+</div>
+
+<!-- ── SCOPE COMPARISON — WHAT'S IN VS OUT ── -->
+<div class="sec-label" style="margin-top:1.5rem">Scope clarity — exactly what is and isn't included</div>
+<table>
+  <thead>
+    <tr>
+      <th class="fc">Deliverable</th>
+      <th style="width:18%;text-align:center">Included</th>
+      <th style="width:18%;text-align:center">Quantity / limit</th>
+      <th>What this means in practice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="fc">Social media posts<span class="cap">Static, carousel, or reel — mix decided monthly</span></td>
+      <td style="text-align:center" class="yes">✓</td>
+      <td style="text-align:center" class="val">12 / month</td>
+      <td class="sc">3 posts per week on average. Format mix agreed at start of each calendar.</td>
+    </tr>
+    <tr>
+      <td class="fc">Instagram / Facebook stories<span class="cap">Polls, Q&A, testimonial templates</span></td>
+      <td style="text-align:center" class="yes">✓</td>
+      <td style="text-align:center" class="val">15 drafts / month</td>
+      <td class="sc">Delivered as templates. Posting is done by Meta Vibronics unless otherwise agreed.</td>
+    </tr>
+    <tr>
+      <td class="fc">Reel cover templates<span class="cap">Brand-matched, profile grid consistent</span></td>
+      <td style="text-align:center" class="yes">✓</td>
+      <td style="text-align:center" class="val">6 templates (one-time)</td>
+      <td class="sc">Designed once during setup. Additional covers billed separately.</td>
+    </tr>
+    <tr>
+      <td class="fc">Hashtag & keyword research<span class="cap">30 tags across branded, niche, broad, local</span></td>
+      <td style="text-align:center" class="yes">✓</td>
+      <td style="text-align:center" class="val">1 research sprint</td>
+      <td class="sc">Delivered in the first week. Refreshed every 3 months on request.</td>
+    </tr>
+    <tr>
+      <td class="fc">Monthly content calendar</td>
+      <td style="text-align:center" class="yes">✓</td>
+      <td style="text-align:center" class="val">1 / month</td>
+      <td class="sc">Sent for approval by the 25th of the prior month.</td>
+    </tr>
+    <tr>
+      <td class="fc">Monthly performance report<span class="cap">Reach, engagement, profile visits, growth</span></td>
+      <td style="text-align:center" class="yes">✓</td>
+      <td style="text-align:center" class="val">1 / month</td>
+      <td class="sc">Delivered within 3 working days of month end.</td>
+    </tr>
+    <tr>
+      <td class="fc">Profile setup — Instagram + LinkedIn</td>
+      <td style="text-align:center" class="yes">✓</td>
+      <td style="text-align:center" class="val">1 time (setup month)</td>
+      <td class="sc">Bio copy, visual refresh, highlight icons, Linktree. Done once in onboarding week.</td>
+    </tr>
+    <tr>
+      <td class="fc">Google Business Profile management<span class="cap">Posts, photos, services</span></td>
+      <td style="text-align:center" class="yes">✓</td>
+      <td style="text-align:center" class="val">Setup only</td>
+      <td class="sc">Ongoing GMB posting is not included in this bundle. Available as an add-on.</td>
+    </tr>
+    <tr>
+      <td class="fc">WhatsApp automation + CRM</td>
+      <td style="text-align:center" class="yes">✓</td>
+      <td style="text-align:center" class="val">Setup only (5 replies, 8 catalog items)</td>
+      <td class="sc">We build it, train Bhaavtharang on usage. Ongoing management is separate.</td>
+    </tr>
+    <tr>
+      <td class="fc">Booking page + Razorpay setup</td>
+      <td style="text-align:center" class="yes">✓</td>
+      <td style="text-align:center" class="val">1 page, 1 gateway, 2 forms</td>
+      <td class="sc">Razorpay bank account must be held by Bhaavtharang. We configure, they own.</td>
+    </tr>
+    <tr>
+      <td class="fc">Custom GPT — brand voice AI</td>
+      <td style="text-align:center" class="yes">✓</td>
+      <td style="text-align:center" class="val">1 model, 5 caption styles</td>
+      <td class="sc">Requires ChatGPT Plus (₹1,650/month) — paid by Bhaavtharang directly.</td>
+    </tr>
+    <tr>
+      <td class="fc">Paid ad campaigns (Meta / Google)</td>
+      <td style="text-align:center" class="no">✗ not included</td>
+      <td style="text-align:center" class="no">—</td>
+      <td class="sc">Ad management available as a separate add-on. Ad spend always paid by client.</td>
+    </tr>
+    <tr>
+      <td class="fc">Video shooting / photography</td>
+      <td style="text-align:center" class="no">✗ not included</td>
+      <td style="text-align:center" class="no">—</td>
+      <td class="sc">Raw footage or photos must be provided by Bhaavtharang for reel production.</td>
+    </tr>
+    <tr>
+      <td class="fc">Website design or development</td>
+      <td style="text-align:center" class="no">✗ not included</td>
+      <td style="text-align:center" class="no">—</td>
+      <td class="sc">Quoted separately if required.</td>
+    </tr>
+    <tr>
+      <td class="fc">Linktree Pro / custom domain / Razorpay fees</td>
+      <td style="text-align:center" class="no">✗ not included</td>
+      <td style="text-align:center" class="no">—</td>
+      <td class="sc">All third-party platform costs are borne directly by Bhaavtharang.</td>
+    </tr>
+    <tr class="nr"><td colspan="4">Everything above is in writing. If it is not in this table, it is not in scope. Any addition is a new brief and will be quoted separately before work begins.</td></tr>
+  </tbody>
+</table>
+
+<!-- ── REVISION LIMITS ── -->
+<div class="sec-label" style="margin-top:1.5rem">Revision limits — no surprises</div>
+<table>
+  <thead>
+    <tr>
+      <th class="fc">Revision type</th>
+      <th>What is covered</th>
+      <th style="width:22%">Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="fc" style="color:var(--color-text-success);font-weight:500">Rounds 1 & 2 — included</td>
+      <td class="sc">Font size · spelling corrections · image swaps · minor text edits within the same approved concept and layout</td>
+      <td class="yes">No charge</td>
+    </tr>
+    <tr>
+      <td class="fc warn">Round 3+ — chargeable</td>
+      <td class="sc">Any further minor revision after the 2 included rounds on the same asset</td>
+      <td class="warn">₹500 per asset per round</td>
+    </tr>
+    <tr>
+      <td class="fc danger">Concept change</td>
+      <td class="sc">Changing layout structure, visual direction, or messaging angle on an already-approved asset. This is a new brief — not a revision.</td>
+      <td class="danger">Quoted separately</td>
+    </tr>
+    <div class="highlight-note">
+<i>
+<strong>Approval Policy: </strong> For documentation and accountability, all approvals must be provided in writing via WhatsApp, email, or other text-based communication channels. Verbal approvals will not be considered valid. Once an asset is approved, it will be treated as final and moved into production.
+</i>
+</div>
+  </tbody>
+</table>
+
+<!-- ── IP & SOURCE FILES ── -->
+<div class="sec-label" style="margin-top:1.5rem">Intellectual property — what transfers to Bhaavtharang, what doesn't</div>
+<table>
+  <thead>
+    <tr>
+      <th class="fc">Asset type</th>
+      <th>Examples</th>
+      <th style="width:28%">Ownership</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="fc yes">Final delivered files</td>
+      <td class="sc">.png · .mp4 · .pdf · exported JPEGs — all finished assets delivered to Bhaavtharang</td>
+      <td class="yes">Transfers to Bhaavtharang on full payment clearance</td>
+    </tr>
+    <tr>
+      <td class="fc warn">Source / editable files</td>
+      <td class="sc">Figma project links · Adobe Illustrator .ai packages · Canva editable templates · source code</td>
+      <td class="warn">Stays with Meta Vibronics. Transferable at +35% of project value as a written digital asset buyout request.</td>
+    </tr>
+    <tr class="nr"><td colspan="3">Governed by Indian Copyright Act, 1957. The 35% buyout fee applies per project, not per individual file.</td></tr>
+  </tbody>
+</table>
+
+<!-- ── PAYMENT & TIMELINE ── -->
+<div class="sec-label" style="margin-top:1.5rem">Payment structure & timeline</div>
+<div class="tc-grid">
+  <div class="tc-card">
+    <div class="tc-title"><i class="ti ti-credit-card" aria-hidden="true"></i> Payment split</div>
+    <div class="tc-body"><span class="hl">50% advance (₹10,000)</span> to initiate onboarding and project setup. <span class="hl">The remaining 50% balance (₹9,999)</span> is due at the mid-point of the first monthly cycle.</div>
+  </div>
+    <div class="tc-card">
+    <div class="tc-title"><i class="ti ti-clock" aria-hidden="true"></i> Onboarding timeline</div>
+    <div class="tc-body"><span class="hl">A 5–7 working day onboarding period is required </span> for audit, asset collection, profile setup and system configuration before first post goes live. The first content calendar delivered within 7 days of recieving the advance payment.</div>
+  </div>
+  <div class="tc-card">
+    <div class="tc-title"><i class="ti ti-refresh" aria-hidden="true"></i> Monthly retainer (post-bundle)</div>
+    <div class="tc-body">Social media management continues at <span class="hl">₹7,999/month</span> after bundle setup is complete. Monthly advance due by the 1st of each month.</div>
+  </div>
+  <div class="tc-card">
+    <div class="tc-title"><i class="ti ti-receipt" aria-hidden="true"></i> Third-party costs</div>
+    <div class="tc-body">Third-party platform costs, including Razorpay fees, ChatGPT Plus, Linktree Pro, custom domains, and advertising spend, will be paid directly by Bhaavtharang and are not included in this proposal.</div>
+  </div>
+  <div class="tc-card">
+    <div class="tc-title"><i class="ti ti-printer" aria-hidden="true"></i> Print & production disclaimer</div>
+    <div class="tc-body"> Meta Vibronics will provide professionally prepared, CMYK-formatted, press-ready files suitable for commercial printing. As print output may vary across vendors, final colour matching, physical proof approvals, print vendor coordination, and regulatory clearances prior to mass production will remain the responsibility of Bhaavtharang.</div>
+  </div>
+  <div class="tc-card">
+    <div class="tc-title"><i class="ti ti-file-text" aria-hidden="true"></i> Taxes</div>
+    <div class="tc-body">₹19,999 is the final net investment. Meta Vibronics is currently exempt from GST collection under the applicable threshold limits; therefore, no additional taxes apply and no separate GST invoice will be issued. The amount stated in this proposal is the exact amount payable.</div>
+  </div>
+</div>
+
+<div class="agreement-container">
+
+    <h2>1. Confidentiality, Data Privacy & Liability</h2>
+    <p>Meta Vibronics agrees to maintain absolute confidentiality regarding Bhaavtharang’s internal operations. During the setup of WhatsApp Automation, CRM tools, and Booking systems, Meta Vibronics will not access, store, or share any Protected Health Information (PHI) or patient details. Meta Vibronics will implement standard security protocols but shall not be held liable for any data breaches occurring on third-party platforms (e.g., Razorpay, Calendly, WhatsApp).</p>
+
+    <h2>2. Termination & Cancellation</h2>
+    <p>Either party may terminate the ongoing monthly retainer by providing 30 days' written notice. If the project or retainer is cancelled midway through a billing cycle by the Client, the 50% advance payment is strictly non-refundable, and the client will be billed a pro-rata 'Kill Fee' for any work completed up to the date of termination.</p>
+
+    <h2>3. Governing Law & Jurisdiction</h2>
+    <p>This agreement shall be governed by and construed in accordance with the laws of India. Any disputes arising from this contract shall first be attempted to be resolved through amicable mutual discussion. Unresolved disputes shall be subject to the exclusive jurisdiction of the courts located in Faridabad.</p>
+
+    <div class="highlight">
+        <strong>Note:</strong> An acquisition form will be shared separately to ensure a cohesive workflow.
+    </div>
+
+</div>
+<!-- ── FOOTER ── -->
+<div class="footer-bar">
+  <div class="footer-mv">META<span style="color:var(--color-text-info)">.</span>VIBRONICS &nbsp;·&nbsp; metavibronics@gmail.com</div>
+  <div class="footer-contact">+91 83688 25928 &nbsp;·&nbsp; @metavibronics &nbsp;·&nbsp; Valid for 30 days from June 2026</div>
+</div>
+
+</div>
+
+</body>
+</html>
